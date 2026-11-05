@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int choice;
+    double num, res;
+
+    printf("1. Square\n");
+    printf("2. Cube\n");
+    printf("3. Square root\n");
+    printf("Enter choice (1-3): ");
+    scanf("%d", &choice);
+
+    printf("Enter a number: ");
+    scanf("%lf", &num);
+
+    switch(choice) {
+        case 1:
+            res = num * num;
+            printf("Square = %lf\n", res);
+            break;
+        case 2:
+            res = num * num * num;
+            printf("Cube = %lf\n", res);
+            break;
+        case 3:
+            if (num >= 0) {
+                res = sqrt(num);
+                printf("Square root = %lf\n", res);
+            } else {
+                printf("Error: Negative number\n");
+            }
+            break;
+        default:
+            printf("Invalid choice\n");
+    }
+
+    return 0;
+}
