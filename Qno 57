@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+    int row, column, spaces;
+    const int height = 5;
+
+    for (row = height; row >= 1; row--) {
+        for (spaces = 1; spaces <= height - row; spaces++) {
+            printf(" ");
+        }
+        for (column = 1; column <= 2 * row - 1; column++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}

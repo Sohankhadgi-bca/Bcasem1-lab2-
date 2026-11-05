@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+    int row, column;
+    const int size = 8;
+
+    for (row = 0; row < size; row++) {
+        for (column = 0; column < size; column++) {
+            printf("%c ", (row + column) % 2 == 0 ? '*' : ' ');
+        }
+        printf("\n");
+    }
+    return 0;
+}

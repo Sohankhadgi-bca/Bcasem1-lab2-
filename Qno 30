@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void) {
+    float marks;
+
+    printf("Enter the student's marks (0-100): ");
+    scanf("%f", &marks);
+
+    printf("%s\n", (marks >= 40) ? "Pass" : "Fail");
+    return 0;
+}

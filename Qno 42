@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+    long long number, value, reversed = 0;
+
+    printf("Enter a non-negative integer: ");
+    scanf("%lld", &number);
+
+    if (number < 0) {
+        printf("Negative numbers are not palindromes in this program.\n");
+        return 0;
+    }
+    value = number;
+    while (value != 0) {
+        reversed = reversed * 10 + value % 10;
+        value /= 10;
+    }
+    printf("%s\n", (number == reversed) ? "Palindrome" : "Not a palindrome");
+    return 0;
+}
