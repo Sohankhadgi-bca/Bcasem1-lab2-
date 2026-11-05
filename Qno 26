@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() {
+    int choice;
+    int a, b, res;
+
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("3. Multiplication\n");
+    printf("4. Division\n");
+    printf("5. Modulus\n");
+    printf("Enter choice (1-5): ");
+    scanf("%d", &choice);
+
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+
+    switch(choice) {
+        case 1:
+            res = a + b;
+            printf("Sum = %d\n", res);
+            break;
+        case 2:
+            res = a - b;
+            printf("Difference = %d\n", res);
+            break;
+        case 3:
+            res = a * b;
+            printf("Product = %d\n", res);
+            break;
+        case 4:
+            if (b != 0) {
+                res = a / b;
+                printf("Quotient = %d\n", res);
+            } else {
+                printf("Error: Division by zero\n");
+            }
+            break;
+        case 5:
+            if (b != 0) {
+                res = a % b;
+                printf("Modulus = %d\n", res);
+            } else {
+                printf("Error: Division by zero\n");
+            }
+            break;
+        default:
+            printf("Invalid choice\n");
+    }
+
+    return 0;
+}
